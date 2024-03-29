@@ -1,0 +1,8 @@
+Boot into single user mode 
+Mount /usr 
+CD /usr/sys/conf
+Sysgen
+
+Then follow the kernel build log options - build for 11/23+, with deqna
+
+If the build fails with "uipc_socket will not fit in overlay 0", that duplicates my issue
