@@ -1,0 +1,181 @@
+sysgen> c
+
+For help, answer the question with ?<RETURN>
+To backup to the previous question, type <CTRL/D>
+
+Configuration name <unix> ? 
+
+Configuration file exists, overwrite it <no> ? yes
+
+Processor type:
+
+( 23 23+ 24 34 40 44 45 55 60 70 73 83 84 ) < 23+ > ? 
+
+Memory size in K bytes (K = 1024) < 3840 > ? 
+
+I/O buffer cache size (NBUF: min = 16, max = 100) < 35 > ? 
+
+Omit unibus map support, to save kernel space <yes> ? 
+
+Please enter the system (ROOT) disk controller first.
+
+Disk controller type:
+
+< rh11 rh70 rp11 rk611 rk711 rl11 rx211 rk11,
+  uda50 kda50 rqdx1 rqdx2 rqdx3 klesi rux1 > ? rqdx3
+
+First MSCP disk controller:
+
+Drive 0 type < rx33 rx50 rd31 rd32 rd51 rd52 rd53 rd54 > ? rd54
+
+Drive 1 type < rx33 rx50 rd31 rd32 rd51 rd52 rd53 rd54 > ? rd54
+
+Drive 2 type < rx33 rx50 rd31 rd32 rd51 rd52 rd53 rd54 > ? rd54
+
+Drive 3 type < rx33 rx50 rd31 rd32 rd51 rd52 rd53 rd54 > ? rd54
+
+Drive 4 type < rx33 rx50 rd31 rd32 rd51 rd52 rd53 rd54 > ? 
+
+CSR address <172150> ? 
+
+Vector address <154> ? 
+
+Is the system disk on this controller <yes> ? 
+
+System disk unit number <0> ? 
+
+Disk controller type:
+
+< rh11 rh70 rp11 rk611 rk711 rl11 rx211 rk11,
+  uda50 kda50 rqdx1 rqdx2 rqdx3 klesi rux1 > ? 
+
+Use standard placement of root, swap, and error log <yes> ? 
+
+Magtape controller:
+
+< tm02 tm03 tm11 ts11 tsv05 tsu05 tu80 tk50 tu81 > ? tk50
+
+Magtape unit number < 0->3 > ? 0
+
+CSR address <174500> ? 
+
+Vector address <260> ? 
+
+Magtape unit number < 0->3 > ? 
+
+Magtape controller:
+
+< tm02 tm03 tm11 ts11 tsv05 tsu05 tu80 tk50 tu81 > ? 
+
+Crash dump device < tk50 rd54 > ? tk50
+
+LP11/LPV11 line printer present <no> ? 
+
+Communications devices:
+
+< dz dzv dzq dh dhu dhv dhdm du dn kl dl > ? 
+
+Number of pseudo ttys <2> ? 
+
+Include C/A/T phototypesetter driver <no> ? 
+
+User devices:
+
+< u1 u2 u3 u4 > ? 
+
+Current CPU has floating point hardware!
+
+Include kernel floating point simulator <no> ? 
+
+Include TCP/IP ethernet support <yes> ? 
+
+Ethernet interfaces:
+
+< deqna deuna n1 n2 > ? deqna
+
+Number of units <1> ? 
+
+Unit 0 CSR address <174440> ? 
+
+Unit 0 Vector address <400> ? 
+
+Ethernet interfaces:
+
+< deqna deuna n1 n2 > ? 
+
+Use standard network parameters <yes> ? 
+
+Use standard system parameters <yes> ? 
+
+Include memory shuffle routine <yes> ? 
+
+Include interprocess communication message facility <yes> ? 
+
+Use standard message parameters <yes> ? 
+
+Include interprocess communication semaphore facility <yes> ? 
+
+Use standard semaphore parameters <yes> ? 
+
+Include advisory record and file locking <yes> ? 
+
+Use standard locking parameters <yes> ? 
+
+Include multiple access user space <yes> ? 
+
+Use standard maus parameters <yes> ? 
+
+AC power line frequency in hertz <60> ? 
+
+Current timezone is 6 hours west/behind GMT.
+
+Timezone (hours west/behind GMT) <5=EST 6=CST 7=MST 8=PST> ? 
+
+Current timezone is 6 hours west/behind GMT.
+
+Timezone (hours west/behind GMT) <5=EST 6=CST 7=MST 8=PST> ? 6
+
+Does your area use daylight savings time <yes> ? 
+
+Choose the Geographic Area for daylight savings time from the table below:
+
+                Geographic Area Selection
+                --------------- ---------
+                USA                1
+                Australia          2
+                Western Europe     3
+                Central Europe     4
+                Eastern Europe     5
+
+Enter the selection number <1> 
+
+
+ULTRIX-11 System Generation Program
+
+For help, type h then press <RETURN>
+
+
+sysgen> m
+
+Configuration name <unix> ? 
+
+****** CREATING ULTRIX-11 CONFIGURATION AND VECTOR TABLES ******
+
+Device  Address Vector  units
+
+console 177560   60
+kw11-l  177456  100
+kw11-p  172540  104
+rq      172150  154     4
+tk      174500  260     1       (crash dump device)
+if_qe   174440  400     1
+
+Filsys  Device  maj/min start   length
+
+root    ra        2/0
+pipe    ra        2/0
+swap    ra        2/2   100     3000
+errlog  ra       19/2   0       100
+uipc_socket will not fit in overlay 0
+
+Can't make kernel from configuration `unix.cf'!
